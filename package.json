@@ -1,0 +1,39 @@
+{
+  "name": "course-certificate-system",
+  "version": "1.0.0",
+  "description": "A MERN stack application for course completion certificates",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "install-client": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "seed": "node scripts/seedData.js"
+  },
+  "keywords": [
+    "mern",
+    "courses",
+    "certificates",
+    "education"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-validator": "^7.0.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^7.8.7",
+    "multer": "^1.4.5-lts.1",
+    "pdfkit": "^0.13.0",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "nodemon": "^3.0.1"
+  }
+}
